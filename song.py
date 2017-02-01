@@ -5,6 +5,5 @@
 from scrolldisp import Display
 import unicornhat, urllib2
 
-unicornhat.rotation(180)
-unicornhat.brightness(0.05)
+unicornhat.brightness(0.5)
 Display("~R" + urllib2.urlopen("http://cigix.noip.me/update.php").read() + " ~R", delay=0.03)

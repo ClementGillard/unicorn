@@ -4,7 +4,7 @@
 import unicornhat as u
 import time, math
 
-u.brightness(0.05)
+u.brightness(0.5)
 
 def line(x1, y1, x2, y2, color=(255, 255, 255)):
     l = math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))

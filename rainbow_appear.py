@@ -4,7 +4,7 @@
 import unicornhat as u
 import math, time
 
-u.brightness(0.1)
+u.brightness(0.5)
 for n in range(15):
     for x in range(max(0, n - 7), min(8, n + 1)):
         r = int((math.cos((n - x) * math.pi / 4) + 1) * 127)

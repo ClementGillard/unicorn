@@ -4,7 +4,7 @@
 import unicornhat as u
 import colorsys, time
 
-u.brightness(0.05)
+u.brightness(0.5)
 i = 0.0
 while True:
     i -= 0.002
