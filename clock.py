@@ -7,12 +7,27 @@ import time, math
 u.brightness(0.5)
 
 def line(x1, y1, x2, y2, color=(255, 255, 255)):
-    l = math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
-    dx = (x2-x1) / l
-    dy = (y2-y1) / l
-    r, g, b = color
-    for i in range(int(round(l+1))):
-        u.set_pixel(int(round(x1+i*dx)), int(round(y1+i*dy)), r, g, b)
+    x1 = int(x1)
+    y1 = int(y1)
+    x2 = int(x2)
+    y2 = int(y2)
+
+    dx = abs(x2 - x1)
+    dy = abs(y2 - y1)
+    sx = 1 if x1 < x2 else -1
+    sy = 1 if y1 < y2 else -1
+    err = dx - dy
+
+    u.set_pixel(x1, y1, *color)
+    while x1 != x2 or y1 != y2:
+        e = 2 * err
+        if e > -dy:
+            err -= dy
+            x1 += sx
+        if e < dx:
+            err += dx
+            y1 += sy
+        u.set_pixel(x1, y1, *color)
 
 def circle(color=(255, 255, 255)):
     line(0.0, 2.0, 0.0, 5.0, color)
