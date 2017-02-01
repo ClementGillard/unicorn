@@ -40,11 +40,18 @@ def circle(color=(255, 255, 255)):
     u.set_pixel(6, 6, r, g, b)
     u.set_pixel(6, 1, r, g, b)
 
+centerx = 3.5
+centery = 3.5
+
 def getX(angle, length):
-    return int(round(3.5+length*math.cos(angle)))
+    return int(round(centerx+length*math.cos(round(angle, 5))))
 
 def getY(angle, length):
-    return int(round(3.5+length*math.sin(angle)))
+    return int(round(centery+length*math.sin(round(angle, 5))))
+
+len_middle = 0.2
+len_short = 2
+len_long = 3.5
 
 while True:
     currenttime = time.localtime()
@@ -58,13 +65,15 @@ while True:
 
     circle((255, 0, 255))
 
-    line(getX(asec, 0.5), getY(asec, 0.5),
-         getX(asec, 3.5), getY(asec, 3.5),
-         (255, 0, 0))
-    line(getX(am, 0.5), getY(am, 0.5), getX(am, 3.5), getY(am, 3.5), (0, 255, 0))
-    line(getX(ah, 0.5), getY(ah, 0.5), getX(ah, 2), getY(ah, 2), (0, 0, 255))
+    line(getX(asec, len_middle), getY(asec, len_middle),
+         getX(asec, len_long), getY(asec, len_long), (255, 0, 0))
+    line(getX(am, len_middle), getY(am, len_middle),
+         getX(am, len_long), getY(am, len_long), (0, 255, 0))
+    line(getX(ah, len_middle), getY(ah, len_middle),
+         getX(ah, len_short), getY(ah, len_short), (0, 0, 255))
 
-    u.set_pixel(getX(asec, 3.5), getY(asec, 3.5), 255, 0, 0) # ensure at least one pixel shows the seconds
+    # ensure at least one pixel shows the seconds
+    u.set_pixel(getX(asec, len_long), getY(asec, len_long), 255, 0, 0)
 
     u.show()
     time.sleep(1)
