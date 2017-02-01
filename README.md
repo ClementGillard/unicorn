@@ -13,11 +13,6 @@ rainbow_appear.py
 -----------------
 Draws a single rainbow, scrolling from top to bottom, using cosine waves.
 
-song.py
--------
-Uses `scrolldisp.py` to display what song is currently playing on twitch.tv/monstercat,
-using a private external script at cigix.noip.me/update.php
-
 clock.py
 --------
 Displays a clock
