@@ -56,15 +56,16 @@ while True:
     am = (1 + currentmin / 30.0) * math.pi
     asec = (1 + currentsec / 30.0) * math.pi
 
-    line(getX(ah, 0.5), getY(ah, 0.5), getX(ah, 2), getY(ah, 2), (0, 0, 255))
-    line(getX(ah, 0.5), getY(am, 0.5), getX(am, 3), getY(am, 3), (0, 255, 0))
-    line(getX(asec, 0.5), getY(asec, 0.5),
-         getX(asec, 3), getY(asec, 3),
-         (255, 0, 0))
-
     circle((255, 0, 255))
+
+    line(getX(asec, 0.5), getY(asec, 0.5),
+         getX(asec, 3.5), getY(asec, 3.5),
+         (255, 0, 0))
+    line(getX(am, 0.5), getY(am, 0.5), getX(am, 3.5), getY(am, 3.5), (0, 255, 0))
+    line(getX(ah, 0.5), getY(ah, 0.5), getX(ah, 2), getY(ah, 2), (0, 0, 255))
+
+    u.set_pixel(getX(asec, 3.5), getY(asec, 3.5), 255, 0, 0) # ensure at least one pixel shows the seconds
 
     u.show()
     time.sleep(1)
     u.clear()
-
