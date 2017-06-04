@@ -658,4 +658,5 @@ def Display(text, color=(255,255,255), delay=0.1):
     disp.start(delay)
 
 if __name__ == '__main__':
+    u.brightness(0.5)
     Display(' '.join(sys.argv[1:]))
