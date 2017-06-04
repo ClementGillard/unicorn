@@ -4,6 +4,7 @@
 import unicornhat as u
 import time, math
 
+u.rotation(180)
 u.brightness(0.5)
 
 def line(x1, y1, x2, y2, color=(255, 255, 255)):
