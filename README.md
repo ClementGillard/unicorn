@@ -35,6 +35,8 @@ or
     disp = ScrollDisp()
     Display("some text")
 
+You could also call it form the command line, it would feed the arguments to Display.
+
 **Functions**
 
     disp = ScrollDisp(text)
@@ -52,7 +54,7 @@ Default delay is 0.1 and scrolls text smoothly.
 
     Display(text, color, delay)
 
-Executes all the above, with the default values if omitted, without having to instanciate a ScrollDispl.
+Executes all the above, with the default values if omitted, without having to instanciate a ScrollDisp.
 
 **Supported characters**
 

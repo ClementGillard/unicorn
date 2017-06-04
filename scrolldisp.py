@@ -1,8 +1,10 @@
+#!/usr/bin/python
 # scrolling rainbows and text
-# to be used as a lib, not executed
+# to be used as a lib
+# when executed, just Display() the arguments
 
 import unicornhat as u
-import time, math
+import time, math, sys
 
 class ScrollDisp:
     columns = []
@@ -654,3 +656,6 @@ def Display(text, color=(255,255,255), delay=0.1):
     disp = ScrollDisp()
     disp.set_text(text, color)
     disp.start(delay)
+
+if __name__ == '__main__':
+    Display(' '.join(sys.argv[1:]))
