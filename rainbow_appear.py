@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # displays a scrolling rainbow using math, and exits
 
 import unicornhat as u

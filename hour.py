@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # scrolling rainbows and time. uses scrolldisp.py
 
 from scrolldisp import Display

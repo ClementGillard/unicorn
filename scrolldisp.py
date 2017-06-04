@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # scrolling rainbows and text
 # to be used as a lib
 # when executed, just Display() the arguments
@@ -620,7 +620,7 @@ class ScrollDisp:
             self.append_space(2)
         elif char == 0:
             self.append_rainbow()
-        elif self.mappings.has_key(char):
+        elif char in self.mappings.keys():
             self.append_mapping(char, color)
         else:
             self.columns.append([(255,255,255),(255,255,255),(255,255,255),(255,255,255),(255,255,255),(255,255,255),(255,255,255),(255,255,255)])

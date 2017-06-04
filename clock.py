@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # my own attempt at displaying a clock. WIP
 
 import unicornhat as u

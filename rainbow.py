@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # displays a continuous scrolling rainbow using HSV
 
 import unicornhat as u
